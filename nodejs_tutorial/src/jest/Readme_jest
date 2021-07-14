@@ -1,0 +1,24 @@
+HOW TO START
+- npm i -g --save-dev jest
+- change package.json
+    "scripts": {
+        "test": "jest"
+    }
+- always create test script with postfix .test.js
+    ex. functions.test.js
+    NOTE: running npm test will automatically locate functions.test.js and run
+
+////////////////////////////////////////////////////////////////////////////////
+
+jest/functions.js
+    - this file contains functions need to be test
+jest/functions.test.js
+    - this file contains script for testing the functions
+    - notice the filename has postfix .test.js in order or jest to read that this file is for testing.
+
+////////////////////////////////////////////////////////////////////////////////
+
+TO RUN JEST
+type "npm test" in the terminal
+
+- take note the all jest command/scripts can be seen in the internet, just search the google

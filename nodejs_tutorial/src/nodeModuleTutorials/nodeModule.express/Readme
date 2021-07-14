@@ -1,0 +1,14 @@
+This Tutorial is for Rest Api
+
+Express is a fast,light and free web framework for nodejs
+Express makes building web application with Nodejs much easier
+Express has full control over request and response
+
+nodejs/express middleware
+    - acts as a bridge in any request
+    - have access to request and response where you can manipulate the request and response before it goes in and out of the endpoint/routes
+
+note
+    array.map
+    array.filter <- can return a value
+    array.forEach

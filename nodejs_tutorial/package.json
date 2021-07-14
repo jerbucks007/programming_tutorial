@@ -1,0 +1,33 @@
+{
+  "name": "sample_app",
+  "version": "1.0.0",
+  "description": "node sample app",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pug": "^3.0.2",
+    "request": "^2.88.2",
+    "serve-static": "^1.14.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.2",
+    "@babel/core": "^7.6.2",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.6.2",
+    "@babel/polyfill": "^7.6.0",
+    "@babel/preset-env": "^7.6.2",
+    "@babel/preset-es2015": "^7.0.0-beta.53",
+    "@babel/preset-stage-2": "^7.0.0",
+    "@babel/register": "^7.6.2",
+    "@babel/runtime": "^7.6.2",
+    "babel-loader": "^8.0.6",
+    "jest": "^27.0.6",
+    "nodemon": "^2.0.12"
+  }
+}

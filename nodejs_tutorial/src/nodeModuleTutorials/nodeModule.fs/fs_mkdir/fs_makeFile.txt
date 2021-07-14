@@ -1,0 +1,7 @@
+This is a sample file created by fs module
+append a file 1
+append a file 2
+append a file 1
+append a file 2
+append a file 1
+append a file 2
