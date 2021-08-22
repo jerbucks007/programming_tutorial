@@ -1,0 +1,66 @@
+React
+- javascript library for building user interfaces
+- develop in facebook in 2011
+- its not a framework
+
+Part of React
+- components
+    - piece of UI
+    - APP <- root of components
+    - APP contains child components 
+        ex. navbars, footer, profile, trends and feed
+- state vs props
+    - state
+        - is local and internal to the components
+    - this.props
+        - is a read only, cannot be change thru code
+
+NOTE: a state can be modify only on its components 
+- so How to handle event triggered by a children where the state is in the parent
+   1) put handle event on the parent
+   2) pass the event from children to the parent
+   3) search the onDelete to see how its done
+
+HOW TO START
+- npm i -g create-react-app@1.5.2
+- create-react-app [app name] ex. create-react-app react_tutorial_app
+
+TIPS
+- babeljs.io
+    - site to check babel code onverted to javascript code
+- ctrl D
+    - to edit same text at once
+- highlight the code, right click, select Refactor
+    - this will extract the code to automatically create class
+- install React Dev Tools to debugged React application
+
+
+Bootstrap
+- css library that gives application a modern lookup
+
+HOW TO START
+- npm i bootstrap@4.1.1
+- type "import 'bootstrap/dist/css/bootstrap.css';" in index.js
+
+useState hook
+- is use to update the state and queues the re-render of the component
+
+useEffect hook
+- allow to do the side effects ( any work outside a component )
+    - changing document title
+- are work outside of component
+- runs after every render
+
+useRef hook
+- useRef is a lot similar to useState but have differences
+- it preserves the value
+- does not trigger re-render
+- it targets the DOM Elements
+
+useReducer
+- its the same as useState but can handle more complex logic for example
+ is when the next state depends on the previous state 
+
+useContext
+- use to access properties of main function where the context is located
+

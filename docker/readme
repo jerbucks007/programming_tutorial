@@ -1,0 +1,60 @@
+DOCKER
+    - is a platform for building, 
+    running and shipping applications in a consistent matter
+    - if the application works on specific machine it should function 
+    the same way it function on the different machine
+    - it can package the whole application including all its need, nodejs, mongodb and more
+    - it can install all the necessary requirements on an isolated machine called docker
+
+if Application works on specific machine but not on other machine, 
+this is the possible reason
+
+1) One or more files are missing
+2) if other machine have different software version
+3) server settings
+
+All of this can be solve but docker
+
+DOCKER ACHITECTURE
+- Client tak to Server (Docker Engine) tru REST API set on the background
+
+- Linux can run only linux container
+- Windows can run both windows and linux container bcoz it 
+    has custom build Linux kernel
+
+////////////////////////////////////////////////////////////////////////////////
+
+HOW TO START
+- go to docs.docker.com
+- choose the OS where you want to install (current docker version for windows 3.5.2)
+- make sure "Enable Hyper V" and "Install Windows Component" are selected before installing
+
+
+////////////////////////////////////////////////////////////////////////////////
+
+Virtual Machine VS Container
+
+CONTAINER
+- isolated environment for running Application, 
+    allow multiple app to be run in an isolation
+- lightweight bcoz doesn't need the full OS
+- all container shares the same OS /  
+   Kernel : ( engine of the computer that manage the application/ hardware resources )
+- can start quickly bcoz it doesn't need to load the OS
+- less hardware resources bcoz it doesn't need to give them the slice of memory
+
+VIRTUAL MACHINE
+- abstraction of a machine (physical hardware)
+- we can run many Virtual machine in a ral physical mahine
+- we can run application in an isolation environment
+Hypervisor
+    - help to run mac and windows in one machine
+    - software use to manage virtual machine
+    - type of Hypervisor VirtualBox, VMware, Hyper-V (windows only)
+Problem with VM
+    - each virtual machine requires full copy of the OS
+    - slow to start( bcoz each VM has to be loaded live starting a pc )
+    - resource intensive (bcoz each VM take a lice of real physical storage)
+
+
+

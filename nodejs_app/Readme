@@ -1,0 +1,177 @@
+CONTENT
+
+- nodejs meaning
+    how to start
+    what is nodejs
+- jest
+- es6
+    destructuring
+- classes
+- extend classes
+- functions
+- let/var/const
+- module
+- promises
+- nodemodule express
+- nodemodule fs	
+- nodemodule pug
+
+/////////////////////////////////////////////////////////////////////
+
+How To Start
+1) go to location where you want to start app
+2) mkdir [app_name]
+3) cd [app_name] : go to app folder
+4) npm init --yes : instant package.json
+   npm init : fill up all the requirements in package.json
+5) npm i express : install express
+   npm i -g express : install express globally
+   npm i express --save : install express and save to package.json dependencies
+   npm i express --save-dev : install express and save to package.json devDependencies
+6) npm i @babel/register @babel/core @babel/polyfill --save-dev : this will make you easy to use es6
+7) add .babelrc file same location as app.js containing this
+    {
+        "presets": [
+            ["@babel/preset-env"]
+        ],
+        "plugins": [
+            "@babel/plugin-syntax-dynamic-import",
+            ["@babel/plugin-transform-runtime",
+            {
+                "regenerator": true
+            }
+            ]
+        ]
+    }
+8) add this in app.js : make sure all your script containing es6 are not in app.js
+    require('@babel/register');
+    require('@babel/polyfill');
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+NodeJS
+- open source and cross platform runtime evironment for executing javascript code outside other browser
+	- runtime environment - JS engine that run outside a browser
+- nodejs are use for backend services usually API (Application Programming Interfaces)
+- easy to get started
+- super fast and highly scalable services
+- good because u can use javascript for backend not just for frontend
+- node is asynchonous by default not like phyton or asp.net
+ 	- single thread can handle many request
+	- non blocking I/O calls
+- good for non cpu intensive apps for example data proccessing, like shopping site, blogs
+- good with REST api and microservices
+- nodejs fill the gap when running javascript in the machine 
+
+
+- run with "node app.js"
+
+- in node js there is no window but has global
+
+- how to create module (module can be use by other apps)
+  add 
+  module.exports = logger() => {}
+
+
+HOW TO CREATE APP in NODE JS
+- mkdir [name]
+- cd [name]
+- npm init --yes
+- npm i (it will install every packages in the package.json)
+
+NODE JS predefined codes
+
+GLOBALS = becasue nodejs doesn't have window
+__dirname = patch to current directory
+__filename = file name
+require = function to use modules (commonJS)
+module = info about current module (file)
+process = info about env where the program is being executed
+
+EVENT EMITTER
+- one of the core building blocks of nodejs
+- EventEmitter <- a class for event emitter
+
+//////////////////////////////////////////////////////////////////////
+
+- (REST) Representation state transfer
+ 	GET
+	PUT
+	POST
+	DELETE
+REST is a convention for building HTTP Services by using HTTP Methods
+GET, PUT, POST and DELETE
+
+Application Programming Interfaces
+API is use to communicate between 2 application by 
+sending request to the enpoint and vise versa thru HTTP protocol
+
+- process.env.PORT
+	in terminal type "export PORT = 3000" to assign value for port
+
+CRUD Operations/ HTTP Methods
+
+- app.get('/home/family/:member/:type') // use to get info
+	- url = /home/family/father/ama
+		- res.params = {member: father, type: ama}
+	- url = /home/family/father/ama?bday=sept_1
+		- res.query = {bday: sept_1}
+
+- app.post() // use to add info
+	- use postman when sending data
+
+- app.put() // use to update info
+	- use postman when updating data
+
+- app.delete() // use to delete info
+	- use postman when updating data
+
+////////////////////////////////////////////////////////////////////
+
+javascript callback is use for asynchronous process
+
+///////////////////////////////////////////////////////////////////
+
+microservices 
+    - is an architecture where the structure of the application is a collection of many small (autonomous) services.
+
+///////////////////////////////////////////////////////////////////
+
+Express framework
+
+    - is a web framework for nodejs meaning its a backend or server-side framework
+    - as we all know its framework so its a support code that makes our backend coding a lot easier
+    - it is use for rendering apps and also for APIs/Microservices 
+
+///////////////////////////////////////////////////////////////////
+
+Koa framework
+    - its lightweight because it has no middleware bundled, if you want
+    to use router or even body-parser you must install it first because its
+    not included in package.
+    - its more cleaner 
+
+///////////////////////////////////////////////////////////////////
+
+Event binding
+    - is a way of binding an event on the DOM elemet so that your chosen process will
+    invoked when that event is triggered.
+    - examples are onClick, onChange, onKeypress and many more ...
+
+///////////////////////////////////////////////////////////////////
+
+Event loop
+
+///////////////////////////////////////////////////////////////////
+
+- jshint app.js use to check the code if have possible error
+
+- npm i -g nodemon
+	nodemon app.js (watch files and restart if changes happened)
+
+- npm i joi
+	for creating schema validation
+	- Joi = require('joi');
+	- ex. schema = {name : Joi.string().min(3).required()}
+
+
